@@ -29,7 +29,7 @@ ctypes.windll.kernel32.SetConsoleTitleW("APEX XP FARM BOT BY LETSMOKE")
 config = configparser.ConfigParser()
 if os.path.isfile('config.ini') is not True:
     config['CONFIG'] = {'Time': '9000',
-                     'ApexDir': r'C:\Program Files\EA Games\Apex\\r5apex.exe',
+                     'ApexDir': r'C:\Program Files\EA Games\Apex\\r5apex_dx12.exe',
                      'OCR_debug': '0',
                      'show_exp': '1',
                      'Gamemode': 'Trios',
@@ -200,7 +200,7 @@ def process_exists(process_name):
 
 start_time_absolute = time.time()
 
-if process_exists('r5apex.exe'):
+if process_exists('r5apex_dx12.exe'):
     mod = 2
     start_time = time.time()
     time_stuck_start= time.time()
@@ -214,7 +214,7 @@ while True:
     time.sleep(0.005)
     #starting game, make apex window active, starting counting for game restart
     if mod == 1:
-        if process_exists('r5apex.exe') is False:
+        if process_exists('r5apex_dx12.exe') is False:
             print(UP, end=CLEAR)
             print ("------------------------------------GAME NOT STARTED, STARTING-------------------------------------")
             if apexdir=='steam':
@@ -645,7 +645,7 @@ while True:
                 window_found = 0
                 mod = 2
                 
-            if process_exists('r5apex.exe'):
+            if process_exists('r5apex_dx12.exe'):
                 pass
             else: 
                 print(UP, end=CLEAR)
@@ -713,7 +713,7 @@ while True:
 #checking if apex is running 
 
     if mod == 4:
-        os.system('taskkill /f /im r5apex.exe')
+        os.system('taskkill /f /im r5apex_dx12.exe')
         time.sleep(5)
         print(UP, end=CLEAR)
         time.sleep(10)
