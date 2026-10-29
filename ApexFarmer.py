@@ -31,10 +31,10 @@ if os.path.isfile('config.ini') is not True:
     config['CONFIG'] = {'Time': '9000',
                      'ApexDir': r'C:\Program Files\EA Games\Apex\\r5apex_dx12.exe',
                      'OCR_debug': '0',
-                     'show_exp': '1',
+                     'show_exp': '2',
                      'Gamemode': 'Trios',
-                     'Champion': 'Lifeline',
-                     'Requeue': '0'}
+                     'Champion': 'Bangalore',
+                     'Requeue': '1'}
     config['KEYBINDS'] = {'Crouch_Key': 'c',
                     'Heal_Key': '4',
                     'Ability_Key': 'q',
